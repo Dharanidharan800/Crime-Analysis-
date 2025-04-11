@@ -9,7 +9,7 @@ import seaborn as sns
 import pyNetLogo
 
 netlogo = pyNetLogo.NetLogoLink(gui=True)
-netlogo.load_model(r"C:\Users\Dharanidharan\Desktop\Computing final project\Crime analysis.nlogo")
+netlogo.load_model(r"Model Path")
 netlogo.command('setup')
 
 # %%
@@ -113,13 +113,13 @@ df_summary = pd.DataFrame(summary_logs)[[
     "Initial_Police", "Info_Status", "Initial_CI_Count", "Final_CI_Count", "CI_Growth",
     "Criminals_Total", "Criminals_Arrested", "Criminals_Hiding", "Criminals_Active", "Police_Total"
 ]]
-df_summary.to_csv(r"C:\Users\Dharanidharan\Desktop\Computing final project\Dataset generated\summary.csv", index=False)
+df_summary.to_csv(r"path to save summary.csv", index=False)
 print("Data saved to summary.csv")
 
 
 # %%
 
-df = pd.read_csv(r"C:\Users\Dharanidharan\Desktop\Computing final project\Dataset generated\tickwise.csv")
+df = pd.read_csv(r"Path to save tickwise.csv")
 sns.set(style="whitegrid", font_scale=1.3)
 plt.figure(figsize=(14, 7))
 
